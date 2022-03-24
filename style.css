@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+  
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+
+/* Flex Container */
+.flex-nav ul {
+  display:flex;
+  justify-content:space-around;
+  flex-direction: row;
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+/* the list items i.e "item1,2,3"ect are 40% of the max size & social media are 10% the social are 1/4th of the items   */
+li {
+	width: 40%;
+}
+.social {
+	width:10%
+}
+
+
+/* at 800px width the icons will wrap around and seperate for a tablet sized device */
+
+@media all and (max-width: 800px) {
+	.flex-nav ul {
+	flex-wrap: wrap;
+}
+	li {
+	  width: 50%;
+}
+	.social{
+		width:25%
+}
+}
+
+
+/*  at 500px  items will stack leaving social media items accross the bottom*/
+@media all and (max-width: 500px) {
+	li{
+		width: 100%;
+}
+	.social {
+		width:25%
+}
+}
+	
